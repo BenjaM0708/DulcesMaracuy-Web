@@ -7,5 +7,43 @@
     <link rel="stylesheet" href="style.css" />
     <link rel="icon" href="/Photos/image.png" />
   </head>
-  <body></body>
+  <body>
+    <div class="wrapped">
+      <header class="header">
+        <div id="logo-header">
+          <img src="/Photos/image.png" alt="Logo of Dulces Maracuyá" />
+          <p>MARACUYÁ</p>
+        </div>
+        <div>
+          <nav>
+            <ul class="bar-link">
+              <li><a href="/index.html">Home</a></li>
+              <li><a href="/about.html">About</a></li>
+              <li><a href="/services.html">Services</a></li>
+              <li><a href="/contact.html">Contact</a></li>
+            </ul>
+          </nav>
+        </div>
+      </header>
+
+      <main></main>
+
+      <footer class="footer">
+        <div class="footer-links">
+          <a href="/Legal/legal.html" target="_blank">Aviso Legal</a>
+        </div>
+
+        <div class="footer-copy">
+          <p>
+            © <span id="year"></span> Dulces Maracuyá. Todos los derechos
+            reservados
+          </p>
+        </div>
+      </footer>
+
+      <script>
+        document.getElementById("year").textContent = new Date().getFullYear();
+      </script>
+    </div>
+  </body>
 </html>

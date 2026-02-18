@@ -8,58 +8,61 @@
     <link rel="icon" href="/Photos/image.png" />
   </head>
   <body>
-    <header class="header">
-      <div id="logo-header">
-        <img src="/Photos/image.png" alt="Logo of Dulces Maracuyá" />
-        <p>MARACUYÁ</p>
-      </div>
-      <div>
-        <nav>
-          <ul class="bar-link">
-            <li><a href="/index.html">Home</a></li>
-            <li><a href="/about.html">About</a></li>
-            <li><a href="/services.html">Services</a></li>
-            <li><a href="/contact.html">Contact</a></li>
-          </ul>
-        </nav>
-      </div>
-    </header>
+    <div class="wrapped">
+      <header class="header">
+        <div id="logo-header">
+          <img src="/Photos/image.png" alt="Logo of Dulces Maracuyá" />
+          <p>MARACUYÁ</p>
+        </div>
+        <div>
+          <nav>
+            <ul class="bar-link">
+              <li><a href="/index.html">Home</a></li>
+              <li><a href="/about.html">About</a></li>
+              <li><a href="/services.html">Services</a></li>
+              <li><a href="/contact.html">Contact</a></li>
+            </ul>
+          </nav>
+        </div>
+      </header>
 
-    <section id="home-section">
-      <img src="/Photos/roseCake.jpg" alt="rose cake" />
-      <h1>Creative Baking</h1>
-      <p>A delicacy wrapped in a work of art</p>
-    </section>
+      <main>
+        <section id="home-section">
+          <img src="/Photos/portada.png" alt="rose cake" />
+          <h1>Creative Baking</h1>
+          <p>A delicacy wrapped in a work of art</p>
+        </section>
 
-    <section>
-      <h2>Welcome to Dulces Maracuyá</h2>
+        <section class="description-section">
+          <h2>Welcome to Dulces Maracuyá</h2>
 
-      <p>
-        Where creativity and love come together in every bite.<br /><br />We
-        craft custom dream cakes, detailed 3D edible sculptures, and beautifully
-        decorated cookies that make every celebration truly special.<br /><br />From
-        family birthdays to weddings and events, our creations are designed to
-        bring joy, wonder, and a little sweetness to every moment.
-      </p>
-    </section>
+          <p>
+            Where creativity and love come together in every bite.<br /><br />We
+            craft custom dream cakes, detailed 3D edible sculptures, and
+            beautifully decorated cookies that make every celebration truly
+            special.<br /><br />From family birthdays to weddings and events,
+            our creations are designed to bring joy, wonder, and a little
+            sweetness to every moment.
+          </p>
+        </section>
+      </main>
 
-    <footer class="footer">
-      <div class="footer-container">
+      <footer class="footer">
         <div class="footer-links">
           <a href="/Legal/legal.html" target="_blank">Aviso Legal</a>
         </div>
 
         <div class="footer-copy">
           <p>
-            © <span id="year"></span> TuNombre o Nombre del Servicio. Todos los
-            derechos reservados.
+            © <span id="year"></span> Dulces Maracuyá. Todos los derechos
+            reservados
           </p>
         </div>
-      </div>
-    </footer>
+      </footer>
 
-    <script>
-      document.getElementById("year").textContent = new Date().getFullYear();
-    </script>
+      <script>
+        document.getElementById("year").textContent = new Date().getFullYear();
+      </script>
+    </div>
   </body>
 </html>
