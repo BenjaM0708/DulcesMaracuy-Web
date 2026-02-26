@@ -1,17 +1,17 @@
 /*Fonts*/
 
 @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=Lugrasimo&family=Raleway:ital,wght@0,100..900;1,100..900&family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 
 /*General*/
 :root {
-  --color-primary: rgb(244, 208, 27);
+  --color-primary: rgb(103, 87, 7);
   --color-secondary: black ;
   --color-tercery: white;
 
   --color-text-dark: black;
   --color-text-light: white;
-
-  --color-background:;
+  
 }
 
 *,
@@ -29,13 +29,14 @@ html {
 }
 
 html, body {
-    height: 100%;
+  height: 100%;
 }
 
-.wrapper {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
+body {
+ min-height: 100vh;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  background-color: var(--color-secondary);
 }
 
 a {
@@ -60,6 +61,7 @@ a:link {
   align-items: center;
   padding: 5px 3%;
   width: 100%;
+  color: var(--color-text-light);
 }
 
 header img {
@@ -106,6 +108,7 @@ header p {
   border: solid;
   border-radius: 50px 50px 50px 50px;
   border-color: var(--color-text-dark);
+  box-shadow: 0.05rem 0.05rem 0.05rem 2px rgba(0, 0, 0, 11%);
 }
 
 /*main*/
@@ -113,25 +116,75 @@ header p {
 main {
   background-color: var(--color-secondary);
   display: flex;
-  flex: 1; 
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
+}
+
+main p {
+  font-family: "Roboto", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+}
+
+.home-section {
+  background-image: radial-gradient(rgba(0,0,0,0.7), rgba(0,0,0,1) 85%) , url("/Photos/cookies.jpg");
+  
+  background-size:cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  padding: 200px 0; 
+  position: relative;
+  left: 0;
+  color: var(--color-text-light);
+}
+
+main .title {
+  animation: fadeInUp 1.5s ease-out forwards;
+  opacity: 0;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+main h1 {
+  font-size: 5.5rem;
+}
+
+.home-section p {
+  font-size: 1.5rem;
+}
+
+.home-section div {
+  display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-
-
-h1, p, h2 {
+.description-section {
   color: var(--color-text-light);
 }
 
-#home-section img {
-  
+#container-carrusel {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  padding: 2rem;
 }
 
 /*Footer*/
 
 footer {
-  font-family: "Cinzel", serif;
+  font-family: "Roboto", sans-serif;
   font-optical-sizing: auto;
   font-weight: 550;
   font-style: normal;
@@ -143,4 +196,10 @@ footer {
   width: 100%;
   align-items: center;
   padding: 1rem;
+  bottom: 0;
+  position: fixed
+}
+
+.footer a, .footer p {
+  color: var(--color-text-dark);
 }
