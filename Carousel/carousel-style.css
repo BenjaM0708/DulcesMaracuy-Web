@@ -6,12 +6,11 @@
 /*General*/
 :root {
   --color-primary: rgb(103, 87, 7);
-  --color-secondary: black ;
+  --color-secondary: black;
   --color-tercery: white;
 
   --color-text-dark: black;
   --color-text-light: white;
-  
 }
 
 *,
@@ -20,7 +19,6 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  
 }
 
 html {
@@ -33,7 +31,7 @@ html, body {
 }
 
 body {
- min-height: 100vh;
+  min-height: 100vh;
   display: grid;
   grid-template-rows: auto 1fr auto;
   background-color: var(--color-secondary);
@@ -65,7 +63,7 @@ a:link {
 }
 
 header img {
-  height:50px;
+  height: 50px;
   width: auto;
   padding: 0.1%;
 }
@@ -111,7 +109,7 @@ header p {
   box-shadow: 0.05rem 0.05rem 0.05rem 2px rgba(0, 0, 0, 11%);
 }
 
-/*main*/
+/*Main*/
 
 main {
   background-color: var(--color-secondary);
@@ -119,31 +117,18 @@ main {
   flex-direction: column;
   align-items: center;
   flex: 1;
+  padding: 3rem 2rem;
 }
 
-main p {
-  font-family: "Roboto", sans-serif;
+main h1 {
+  font-family: "Cinzel", serif;
   font-optical-sizing: auto;
-  font-weight: <weight>;
+  font-weight: 550;
   font-style: normal;
-}
-
-.home-section {
-  background-image: radial-gradient(rgba(0,0,0,0.7), rgba(0,0,0,1) 85%) , url("/Photos/cookies.jpg");
-  
-  background-size:cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  width: 100%;
-  padding: 200px 0; 
-  position: relative;
-  left: 0;
+  font-size: 3.5rem;
   color: var(--color-text-light);
-}
-
-main .title {
+  margin-bottom: 2rem;
   animation: fadeInUp 1.5s ease-out forwards;
-  opacity: 0;
 }
 
 @keyframes fadeInUp {
@@ -157,31 +142,130 @@ main .title {
   }
 }
 
-main h1 {
-  font-size: 5.5rem;
-}
-
-.home-section p {
-  font-size: 1.5rem;
-}
-
-.home-section div {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.description-section {
+main p {
+  font-family: "Roboto", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
   color: var(--color-text-light);
 }
 
-#container-carrusel {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  padding: 2rem;
+.title {
+  animation: fadeInUp 1.5s ease-out forwards;
+  opacity: 0;
 }
 
-/*Footer*/
+/* Carousel Styles */
+
+.carousel-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  animation: fadeInUp 1.5s ease-out 0.3s forwards;
+  opacity: 0;
+  padding: 0 2rem;
+}
+
+.carousel-wrapper {
+  position: relative;
+  width: 100%;
+  height: 70vh;
+  max-height: calc(100vh - 240px);
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+.carousel-slide {
+  display: none;
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.carousel-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.carousel-slide.active {
+  display: block;
+}
+
+.fade {
+  animation: fade 1s;
+}
+
+@keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.carousel-control {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 2rem;
+  padding: 1rem;
+  color: var(--color-text-light);
+  background-color: rgba(103, 87, 7, 0.7);
+  cursor: pointer;
+  user-select: none;
+  border: none;
+  transition: all 0.3s;
+  z-index: 10;
+}
+
+.carousel-control:hover {
+  background-color: rgb(231, 208, 34);
+  color: var(--color-text-dark);
+}
+
+.carousel-control.prev {
+  left: 0;
+  border-radius: 0 5px 5px 0;
+}
+
+.carousel-control.next {
+  right: 0;
+  border-radius: 5px 0 0 5px;
+}
+
+.carousel-dots {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.dot {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.5);
+  cursor: pointer;
+  transition: all 0.3s;
+  border: 2px solid rgb(231, 208, 34);
+}
+
+.dot.active {
+  background-color: rgb(231, 208, 34);
+  width: 20px;
+  height: 20px;
+}
+
+.dot:hover {
+  background-color: rgba(231, 208, 34, 0.8);
+}
+
+/* Footer */
 
 footer {
   font-family: "Roboto", sans-serif;
@@ -197,9 +281,67 @@ footer {
   align-items: center;
   padding: 1rem;
   bottom: 0;
-  position: fixed;
 }
 
 .footer a, .footer p {
   color: var(--color-text-dark);
+}
+
+.footer a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive */
+
+@media (max-width: 768px) {
+  main h1 {
+    font-size: 2.5rem;
+  }
+
+  .carousel-wrapper {
+    height: 60vh;
+    max-height: calc(100vh - 240px);
+  }
+
+  .carousel-control {
+    font-size: 1.5rem;
+    padding: 0.75rem;
+  }
+
+  .dot {
+    width: 12px;
+    height: 12px;
+  }
+
+  .dot.active {
+    width: 18px;
+    height: 18px;
+  }
+}
+
+@media (max-width: 480px) {
+  main h1 {
+    font-size: 2rem;
+  }
+
+  .carousel-wrapper {
+    height: 50vh;
+    max-height: calc(100vh - 240px);
+  }
+
+  .carousel-control {
+    font-size: 1.2rem;
+    padding: 0.5rem;
+  }
+
+  .dot {
+    width: 10px;
+    height: 10px;
+    gap: 0.5rem;
+  }
+
+  .dot.active {
+    width: 15px;
+    height: 15px;
+  }
 }

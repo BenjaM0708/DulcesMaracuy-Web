@@ -2,86 +2,191 @@
 <html lang="es">
   <head>
     <meta charset="UTF-8" />
+    <link rel="icon" href="/Photos/image.png" />
     <title>Aviso Legal</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <style>
-      body {
-        font-family: Arial, sans-serif;
-        line-height: 1.6;
+      @import url("https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=Lugrasimo&family=Raleway:ital,wght@0,100..900;1,100..900&family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&display=swap");
+      @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+
+      * {
         margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        display: grid;
+        grid-template-rows: auto 1fr auto;
+        min-height: 100vh;
+        background-color: black;
+        color: white;
+      }
+
+      .header {
+        background: repeating-linear-gradient(
+          10deg,
+          rgb(103, 87, 7),
+          rgb(231, 208, 34),
+          rgb(103, 87, 7)
+        );
+        height: 15px;
+        padding: 5px 3%;
+      }
+
+      main {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: left;
         padding: 40px 20px;
-        background-color: #f8fafc;
-        color: #1e293b;
       }
 
       .container {
         max-width: 800px;
-        margin: auto;
+        width: 100%;
       }
 
-      h1,
-      h2 {
-        color: #0f172a;
+      main h1 {
+        color: rgb(231, 208, 34);
+        font-family: "Cinzel", serif;
+        font-optical-sizing: auto;
+        font-weight: 550;
+        font-style: normal;
+        font-size: 2.5rem;
+        margin-bottom: 2rem;
+        text-align: center;
       }
 
-      a {
-        color: #2563eb;
+      main h2 {
+        color: rgb(231, 208, 34);
+        font-family: "Cinzel", serif;
+        font-optical-sizing: auto;
+        font-weight: 500;
+        font-style: normal;
+        font-size: 1.5rem;
+        margin-top: 1.5rem;
+        margin-bottom: 1rem;
+      }
+
+      main p {
+        font-family: "Roboto", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 400;
+        font-style: normal;
+        line-height: 1.8;
+        margin-bottom: 1rem;
+        color: white;
+      }
+
+      main a {
+        color: rgb(231, 208, 34);
+        text-decoration: none;
+        transition: all 0.3s;
+      }
+
+      main a:hover {
+        color: white;
         text-decoration: none;
       }
 
-      a:hover {
-        text-decoration: underline;
+      .back {
+        margin: 40px auto 0;
+        display: flex;
+        padding: 10px 20px;
+        justify-content: center;
+        border: solid 2px rgb(231, 208, 34);
+        border-radius: 5px;
+        transition: all 0.3s;
+        width: max-content;
       }
 
-      .back {
-        margin-top: 40px;
-        display: inline-block;
+      .back:hover {
+        background-color: rgb(103, 87, 7);
+        color: white;
+      }
+
+      footer {
+        font-family: "Roboto", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 550;
+        font-style: normal;
+        font-size: 13px;
+        display: flex;
+        justify-content: space-evenly;
+        background: repeating-linear-gradient(
+          10deg,
+          rgb(103, 87, 7),
+          rgb(231, 208, 34),
+          rgb(103, 87, 7)
+        );
+        height: 40px;
+        width: 100%;
+        align-items: center;
+        padding: 1rem;
+      }
+
+      footer a,
+      footer p {
+        color: black;
+      }
+
+      footer a:hover {
+        text-decoration: underline;
       }
     </style>
   </head>
   <body>
-    <div class="container">
-      <h1>Aviso Legal</h1>
+    <header class="header"></header>
 
-      <h2>1. Información General</h2>
-      <p>
-        En cumplimiento con el deber de información recogido en la normativa
-        vigente, se informa que la presente página web es titularidad de:
-      </p>
+    <main>
+      <div class="container">
+        <h1>Aviso Legal</h1>
 
-      <p>
-        Nombre: Benjamin Josué Muñoz Ávila<br />
-        Email de contacto: benjamunozja@gmail.com<br />
-        Finalidad del sitio web: Portafolio personal y muestra de proyectos.
-      </p>
+        <h2>1. Información General</h2>
+        <p>
+          En cumplimiento con el deber de información recogido en la normativa
+          vigente, se informa que la presente página web es titularidad de:
+        </p>
 
-      <h2>2. Objeto</h2>
-      <p>
-        El presente sitio web tiene carácter meramente informativo y tiene como
-        finalidad mostrar proyectos y trabajos realizados por su titular.
-      </p>
+        <p>
+          Nombre: Benjamin Josué Muñoz Ávila<br />
+          Email de contacto: benjamunozja@gmail.com<br />
+          Finalidad del sitio web: Portafolio personal y muestra de proyectos.
+        </p>
 
-      <h2>3. Propiedad Intelectual</h2>
-      <p>
-        Todos los contenidos de esta página web, incluyendo textos, imágenes,
-        diseños y código fuente, son propiedad del titular del sitio web, salvo
-        que se indique lo contrario.
-      </p>
+        <h2>2. Objeto</h2>
+        <p>
+          El presente sitio web tiene carácter meramente informativo y tiene
+          como finalidad mostrar proyectos y trabajos realizados por su titular.
+        </p>
 
-      <h2>4. Responsabilidad</h2>
-      <p>
-        El titular no se hace responsable del mal uso que se realice de los
-        contenidos de esta web ni de los posibles daños derivados del acceso o
-        uso de la misma.
-      </p>
+        <h2>3. Propiedad Intelectual</h2>
+        <p>
+          Todos los contenidos de esta página web, incluyendo textos, imágenes,
+          diseños y código fuente, son propiedad del titular del sitio web,
+          salvo que se indique lo contrario.
+        </p>
 
-      <h2>5. Protección de Datos</h2>
-      <p>
-        Este sitio web no recoge datos personales ni utiliza cookies con fines
-        analíticos o publicitarios.
-      </p>
+        <h2>4. Responsabilidad</h2>
+        <p>
+          El titular no se hace responsable del mal uso que se realice de los
+          contenidos de esta web ni de los posibles daños derivados del acceso o
+          uso de la misma.
+        </p>
 
-      <a href="index.html" class="back">Volver a la página principal</a>
-    </div>
+        <h2>5. Protección de Datos</h2>
+        <p>
+          Este sitio web no recoge datos personales ni utiliza cookies con fines
+          analíticos o publicitarios.
+        </p>
+
+        <a href="../index.html" class="back">Volver a la página principal</a>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <p>&copy; 2026 Dulces Maracuyá. Todos los derechos reservados.</p>
+    </footer>
   </body>
 </html>

@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Galería - Dulces Maracuyá</title>
+    <link rel="stylesheet" href="carousel-style.css" />
+    <link rel="icon" href="../Photos/image.png" />
+  </head>
+  <body>
+    <header class="header">
+      <div id="logo-header">
+        <p>Dulces Maracuyá</p>
+      </div>
+      <ul class="bar-link">
+        <li><a href="../index.html">Inicio</a></li>
+        <li><a href="../about.html">Sobre</a></li>
+        <li><a href="../services.html">Servicios</a></li>
+        <li><a href="../contact.html">Contacto</a></li>
+      </ul>
+    </header>
+
+    <main>
+      <h1 class="title">Fotos</h1>
+
+      <div class="carousel-container">
+        <div class="carousel-wrapper">
+          <div class="carousel-slide fade">
+            <img src="../Photos/cake1.jpg" alt="Foto 1" />
+          </div>
+          <div class="carousel-slide fade">
+            <img src="../Photos/captainAmerica.jpg" alt="Foto 2" />
+          </div>
+          <div class="carousel-slide fade">
+            <img src="../Photos/cake2.jpg" alt="Foto 3" />
+          </div>
+          <div class="carousel-slide fade">
+            <img src="../Photos/goldencake.jpg" alt="Foto 4" />
+          </div>
+          <div class="carousel-slide fade">
+            <img src="../Photos/roseCake.jpg" alt="Foto 5" />
+          </div>
+
+          <!-- Controles de navegación -->
+          <a class="carousel-control prev" onclick="changeSlide(-1)"
+            >&#10094;</a
+          >
+          <a class="carousel-control next" onclick="changeSlide(1)">&#10095;</a>
+        </div>
+
+        <!-- Indicadores de posición -->
+        <div class="carousel-dots">
+          <span class="dot" onclick="currentSlide(1)"></span>
+          <span class="dot" onclick="currentSlide(2)"></span>
+          <span class="dot" onclick="currentSlide(3)"></span>
+          <span class="dot" onclick="currentSlide(4)"></span>
+          <span class="dot" onclick="currentSlide(5)"></span>
+        </div>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <p>&copy; 2026 Dulces Maracuyá. Todos los derechos reservados.</p>
+      <a href="Legal/legal.html">Términos legales</a>
+    </footer>
+
+    <script src="carousel.js"></script>
+  </body>
+</html>
