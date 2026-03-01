@@ -37,12 +37,34 @@
 
         <section class="description-section">
           <div id="container-carrusel">
-            <div>
-              <p>Carrusel</p>
+            <div class="carrusel-class">
+              <div class="carrusel">
+                <img
+                  decoding="async"
+                  src="/Photos/cupcake.jpg"
+                  alt="cupcake photo"
+                />
+                <img
+                  decoding="async"
+                  src="/Photos/portada.png"
+                  alt="cake photo"
+                />
+                <img decoding="async" src="/Photos/familia.jpg" alt="DM Team" />
+              </div>
+
+              <button class="slider slider-prev">&#10094;</button>
+              <button class="slider slider-next">&#10095;</button>
+
+              <div id="indicator-dot">
+                <!--<button class="dot"></button>
+                <button class="dot"></button>
+                <button class="dot"></button>-->
+              </div>
             </div>
 
             <div>
               <h2>Welcome to Dulces Maracuyá</h2>
+              <br />
 
               <p>
                 Where creativity and love come together in every bite.<br /><br />We
@@ -55,6 +77,8 @@
             </div>
           </div>
         </section>
+
+        <div class="margin-footer"></div>
       </main>
 
       <footer class="footer">
@@ -68,6 +92,7 @@
       <script>
         document.getElementById("year").textContent = new Date().getFullYear();
       </script>
+      <script src="home.js"></script>
     </div>
   </body>
 </html>
