@@ -9,6 +9,7 @@
   --color-secondary: black ;
   --color-tercery: white;
   --color-yellow-light: rgb(221, 221, 67);
+  --color-yellow-deg: repeating-linear-gradient(10deg, var(--color-primary), rgb(231, 208, 34), var(--color-primary, rgb(194, 194, 19)));
 
   --color-text-dark: black;
   --color-text-light: white;
@@ -141,7 +142,7 @@ main p {
   position: relative;
   left: 0;
   color: var(--color-text-light);
-  height: 100vh;
+  height: 90vh;
 }
 
 main .title {
@@ -166,6 +167,7 @@ main h1 {
 
 .home-section p {
   font-size: 1.5rem;
+  color: var(--color-yellow-light);
 }
 
 .home-section div {
@@ -197,6 +199,7 @@ position: relative;
 border-radius: 1%;
 height: 45rem;
 width: auto;
+transition: 0.75s ease-in-out;
 }
 
 .carrusel-class {
